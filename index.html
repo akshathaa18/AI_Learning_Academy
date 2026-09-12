@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Learning Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Neural Network Background -->
+    <canvas id="neuralCanvas"></canvas>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">🤖</span>
+            <div>
+                <h1>AI Learning Academy</h1>
+                <p>Learn AI. Build AI. Understand AI.</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+
+            <button id="themeBtn" class="icon-btn" title="Change theme">
+                🌙
+            </button>
+
+            <button id="resetBtn" class="reset-btn">
+                Reset Progress
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <button class="nav-btn active" data-section="home">
+            🏠 Home
+        </button>
+
+        <button class="nav-btn" data-section="courses">
+            📚 Courses
+        </button>
+
+        <button class="nav-btn" data-section="lab">
+            🧪 AI Lab
+        </button>
+
+        <button class="nav-btn" data-section="quiz">
+            📝 Quiz
+        </button>
+
+        <button class="nav-btn" data-section="projects">
+            🚀 Projects
+        </button>
+
+        <button class="nav-btn" data-section="roadmap">
+            🗺️ Roadmap
+        </button>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="section active">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="badge">
+                        ✨ Interactive AI Education
+                    </span>
+
+                    <h2>
+                        Learn
+                        <span class="gradient-text">Artificial Intelligence</span>
+                        from Zero to Advanced
+                    </h2>
+
+                    <p>
+                        Master AI fundamentals, mathematics, machine learning,
+                        deep learning, NLP, computer vision, reinforcement
+                        learning and generative AI through interactive lessons.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button class="primary-btn" data-go="courses">
+                            🚀 Start Learning
+                        </button>
+
+                        <button class="secondary-btn" data-go="roadmap">
+                            🗺️ View Roadmap
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-network">
+
+                    <div class="brain">
+                        🧠
+                    </div>
+
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <div class="orbit orbit-3"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-card">
+
+                <div class="progress-heading">
+
+                    <div>
+                        <h3>🎯 Your Learning Progress</h3>
+                        <p id="progressText">
+                            0% completed
+                        </p>
+                    </div>
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div id="progressFill"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span>📚</span>
+                    <strong id="courseCount">10</strong>
+                    <p>Courses</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>🎬</span>
+                    <strong>40+</strong>
+                    <p>Lessons</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>🧪</span>
+                    <strong>8</strong>
+                    <p>AI Labs</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>🚀</span>
+                    <strong>10+</strong>
+                    <p>Projects</p>
+                </div>
+
+            </div>
+
+
+            <!-- What you'll learn -->
+
+            <div class="content-block">
+
+                <div class="section-title">
+
+                    <span class="section-label">
+                        WHAT YOU WILL LEARN
+                    </span>
+
+                    <h2>
+                        Complete AI Learning Journey
+                    </h2>
+
+                </div>
+
+
+                <div class="learning-grid">
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>AI Fundamentals</h3>
+                        <p>
+                            Understand artificial intelligence,
+                            intelligent agents and problem solving.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <h3>AI Mathematics</h3>
+                        <p>
+                            Learn linear algebra, probability,
+                            statistics and calculus.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Machine Learning</h3>
+                        <p>
+                            Learn supervised, unsupervised and
+                            reinforcement learning.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔥</div>
+                        <h3>Deep Learning</h3>
+                        <p>
+                            Understand neural networks, CNNs,
+                            RNNs and modern architectures.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>NLP</h3>
+                        <p>
+                            Learn how machines understand and
+                            generate human language.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">👁️</div>
+                        <h3>Computer Vision</h3>
+                        <p>
+                            Teach machines to understand images
+                            and visual information.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COURSES ================= -->
+
+        <section id="courses" class="section">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    AI CURRICULUM
+                </span>
+
+                <h2>Explore AI Courses</h2>
+
+                <p>
+                    Follow the courses from beginner fundamentals
+                    to advanced AI concepts.
+                </p>
+
+            </div>
+
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="courseSearch"
+                    placeholder="🔎 Search AI courses..."
+                >
+
+            </div>
+
+
+            <div id="courseGrid" class="course-grid"></div>
+
+        </section>
+
+
+        <!-- ================= LESSON MODAL ================= -->
+
+        <div id="lessonModal" class="modal">
+
+            <div class="modal-content">
+
+                <button class="close-modal" id="closeLesson">
+                    ×
+                </button>
+
+                <div id="lessonContent"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= AI LAB ================= -->
+
+        <section id="lab" class="section">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    INTERACTIVE AI LAB
+                </span>
+
+                <h2>Experiment with AI Concepts</h2>
+
+                <p>
+                    Change parameters and see how AI algorithms work.
+                </p>
+
+            </div>
+
+
+            <!-- Neuron Calculator -->
+
+            <div class="lab-card">
+
+                <div class="lab-header">
+
+                    <div>
+                        <span class="lab-icon">🧠</span>
+                        <h3>Artificial Neuron</h3>
+                    </div>
+
+                    <span class="lab-tag">
+                        Interactive
+                    </span>
+
+                </div>
+
+
+                <div class="neuron-demo">
+
+                    <div class="input-node">
+                        x₁
+                        <span id="x1Value">0.5</span>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="neuron-circle">
+                        Σ
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="output-node">
+                        y
+                        <span id="neuronOutput">0.50</span>
+                    </div>
+
+                </div>
+
+
+                <div class="slider-group">
+
+                    <label>
+                        Input:
+                        <strong id="inputDisplay">0.5</strong>
+                    </label>
+
+                    <input
+                        type="range"
+                        id="inputSlider"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.5"
+                    >
+
+                </div>
+
+
+                <div class="slider-group">
+
+                    <label>
+                        Weight:
+                        <strong id="weightDisplay">1.0</strong>
+                    </label>
+
+                    <input
+                        type="range"
+                        id="weightSlider"
+                        min="0"
+                        max="2"
+                        step="0.1"
+                        value="1"
+                    >
+
+                </div>
+
+
+                <div class="formula">
+
+                    Output = Input × Weight
+
+                    <br>
+
+                    <strong id="formulaResult">
+                        0.5 × 1.0 = 0.50
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Gradient Descent -->
+
+            <div class="lab-card">
+
+                <div class="lab-header">
+
+                    <div>
+                        <span class="lab-icon">📉</span>
+
+                        <h3>Gradient Descent</h3>
+                    </div>
+
+                    <span class="lab-tag">
+                        Animation
+                    </span>
+
+                </div>
+
+
+                <canvas
+                    id="gradientCanvas"
+                    width="700"
+                    height="300">
+                </canvas>
+
+
+                <div class="lab-controls">
+
+                    <button id="gradientStart" class="primary-btn">
+                        ▶ Start
+                    </button>
+
+                    <button id="gradientReset" class="secondary-btn">
+                        ↻ Reset
+                    </button>
+
+                </div>
+
+
+                <p class="lab-explanation">
+                    Gradient descent gradually changes model parameters
+                    to reduce the loss function. The goal is to reach
+                    the minimum point.
+                </p>
+
+            </div>
+
+
+            <!-- K Means -->
+
+            <div class="lab-card">
+
+                <div class="lab-header">
+
+                    <div>
+                        <span class="lab-icon">🟣</span>
+
+                        <h3>K-Means Clustering</h3>
+                    </div>
+
+                    <span class="lab-tag">
+                        Interactive
+                    </span>
+
+                </div>
+
+
+                <canvas
+                    id="kmeansCanvas"
+                    width="700"
+                    height="350">
+                </canvas>
+
+
+                <div class="lab-controls">
+
+                    <button id="kmeansStart" class="primary-btn">
+                        ▶ Run K-Means
+                    </button>
+
+                    <button id="kmeansReset" class="secondary-btn">
+                        ↻ Reset
+                    </button>
+
+                </div>
+
+                <p class="lab-explanation">
+                    K-Means groups data points into clusters by
+                    repeatedly assigning points to the nearest centroid
+                    and updating the centroid positions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUIZ ================= -->
+
+        <section id="quiz" class="section">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    TEST YOUR KNOWLEDGE
+                </span>
+
+                <h2>AI Knowledge Quiz</h2>
+
+                <p>
+                    Test your understanding of AI concepts.
+                </p>
+
+            </div>
+
+
+            <div class="quiz-card">
+
+                <div class="quiz-progress">
+
+                    <span id="quizNumber">
+                        Question 1 of 10
+                    </span>
+
+                    <span id="quizScore">
+                        Score: 0
+                    </span>
+
+                </div>
+
+
+                <div id="questionContainer"></div>
+
+
+                <button
+                    id="nextQuestion"
+                    class="primary-btn"
+                    disabled>
+
+                    Next Question →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    BUILD WITH AI
+                </span>
+
+                <h2>AI Mini Projects</h2>
+
+                <p>
+                    Practice your knowledge by building real projects.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <div class="project-card">
+
+                    <span class="project-level beginner">
+                        Beginner
+                    </span>
+
+                    <h3>🤖 Chatbot</h3>
+
+                    <p>
+                        Build a simple rule-based chatbot and
+                        understand conversational AI.
+                    </p>
+
+                    <ul>
+                        <li>Python basics</li>
+                        <li>Text processing</li>
+                        <li>Conversation logic</li>
+                    </ul>
+
+                    <button class="secondary-btn">
+                        View Roadmap
+                    </button>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <span class="project-level intermediate">
+                        Intermediate
+                    </span>
+
+                    <h3>📧 Spam Classifier</h3>
+
+                    <p>
+                        Build a machine learning model to classify
+                        messages as spam or legitimate.
+                    </p>
+
+                    <ul>
+                        <li>Data preprocessing</li>
+                        <li>Feature extraction</li>
+                        <li>Classification</li>
+                    </ul>
+
+                    <button class="secondary-btn">
+                        View Roadmap
+                    </button>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <span class="project-level intermediate">
+                        Intermediate
+                    </span>
+
+                    <h3>👁️ Image Classifier</h3>
+
+                    <p>
+                        Build a neural network that recognizes
+                        different image categories.
+                    </p>
+
+                    <ul>
+                        <li>CNN</li>
+                        <li>Image preprocessing</li>
+                        <li>Model evaluation</li>
+                    </ul>
+
+                    <button class="secondary-btn">
+                        View Roadmap
+                    </button>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <span class="project-level advanced">
+                        Advanced
+                    </span>
+
+                    <h3>✨ AI Assistant</h3>
+
+                    <p>
+                        Create an intelligent assistant using
+                        modern generative AI concepts.
+                    </p>
+
+                    <ul>
+                        <li>LLMs</li>
+                        <li>Prompt engineering</li>
+                        <li>RAG concepts</li>
+                    </ul>
+
+                    <button class="secondary-btn">
+                        View Roadmap
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ROADMAP ================= -->
+
+        <section id="roadmap" class="section">
+
+            <div class="section-title">
+
+                <span class="section-label">
+                    YOUR AI JOURNEY
+                </span>
+
+                <h2>AI Developer Roadmap</h2>
+
+                <p>
+                    Follow this path to build a strong AI foundation.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap">
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">01</div>
+
+                    <div class="roadmap-content">
+
+                        <span>STEP 1</span>
+
+                        <h3>Programming Fundamentals</h3>
+
+                        <p>
+                            Python, data structures, algorithms,
+                            functions, OOP and problem solving.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">02</div>
+
+                    <div class="roadmap-content">
+
+                        <span>STEP 2</span>
+
+                        <h3>Mathematics for AI</h3>
+
+                        <p>
+                            Linear algebra, probability,
+                            statistics and calculus.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">03</div>
+
+                    <div class="roadmap-content">
+
+                        <span>STEP 3</span>
+
+                        <h3>Machine Learning</h3>
+
+                        <p>
+                            Regression, classification, clustering,
+                            decision trees and ensemble methods.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">04</div>
+
+                    <div class="roadmap-content">
+
+                        <span>STEP 4</span>
+
+                        <h3>Deep Learning</h3>
+
+                        <p>
+                            Neural networks, CNN, RNN,
+                            transformers and optimization.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">05</div>
+
+                    <div class="roadmap-content">
+
+                        <span>STEP 5</span>
+
+                        <h3>Generative AI</h3>
+
+                        <p>
+                            LLMs, embeddings, prompting,
+                            RAG and AI agents.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">06</div>
+
+                    <div class="roadmap-content">
+
+                        <span>STEP 6</span>
+
+                        <h3>Build AI Projects</h3>
+
+                        <p>
+                            Create projects, deploy models,
+                            build your portfolio and prepare for internships.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🤖 AI Learning Academy
+        </div>
+
+        <p>
+            Learn • Experiment • Build • Innovate
+        </p>
+
+        <p class="copyright">
+            © 2026 AI Learning Academy
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
