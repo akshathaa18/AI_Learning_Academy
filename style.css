@@ -2170,3 +2170,295 @@ select:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+
+/* =========================================================
+   5TH SEMESTER LEARNING HUB
+   ========================================================= */
+
+.semester-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.semester-stat {
+    padding: 22px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.semester-stat strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.semester-stat span {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.learning-plan-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 55px;
+}
+
+.learning-plan-card h2 {
+    margin: 14px 0 8px;
+}
+
+.learning-plan-card p {
+    color: var(--muted);
+}
+
+.semester-learning-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.semester-step {
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(0, 229, 255, 0.035);
+    text-align: center;
+}
+
+.semester-step span {
+    display: block;
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+.semester-step b {
+    display: block;
+    margin: 5px 0;
+}
+
+.semester-step small {
+    color: var(--muted);
+}
+
+.semester-subtitle {
+    margin-top: 0;
+}
+
+.semester-course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.semester-course-card {
+    position: relative;
+    padding: 24px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.semester-course-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(0, 229, 255, 0.4);
+}
+
+.semester-course-card .course-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.semester-course-card h3 {
+    margin-bottom: 5px;
+}
+
+.semester-course-card .course-code {
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.semester-course-card p {
+    color: var(--muted);
+    margin: 12px 0;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0 18px;
+}
+
+.course-meta span {
+    padding: 5px 9px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.course-action {
+    width: 100%;
+}
+
+.semester-badge {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 9px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--primary);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    background: rgba(0, 229, 255, 0.06);
+}
+
+.semester-note {
+    margin-top: 30px;
+    padding: 22px;
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.semester-note h3 {
+    margin-bottom: 7px;
+}
+
+.semester-note p {
+    color: var(--muted);
+}
+
+/* Semester unit accordion */
+.sem5-unit {
+    margin: 18px 0;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--card);
+}
+
+.sem5-unit-title {
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.sem5-unit-title:hover {
+    color: var(--primary);
+    background: rgba(0, 229, 255, 0.04);
+}
+
+.sem5-unit-body {
+    display: none;
+    padding: 0 20px 22px;
+    color: var(--muted);
+}
+
+.sem5-unit-body.open {
+    display: block;
+    animation: fadeUp 0.25s ease;
+}
+
+.sem5-topic {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.sem5-topic:last-child {
+    border-bottom: none;
+}
+
+.sem5-topic h4 {
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.sem5-topic p {
+    color: var(--muted);
+}
+
+.sem5-course-header {
+    padding: 25px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius);
+    margin-bottom: 22px;
+}
+
+.sem5-course-header h2 {
+    margin: 8px 0;
+}
+
+.sem5-course-header p {
+    color: var(--muted);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .semester-course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .semester-learning-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .semester-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .semester-course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-learning-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .semester-learning-steps {
+        grid-template-columns: 1fr;
+    }
+}
