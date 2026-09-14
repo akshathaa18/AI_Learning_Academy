@@ -2462,3 +2462,156 @@ select:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =========================================================
+   SEMESTER V STUDY EDITION UI
+   ========================================================= */
+.sem5-study-banner {
+    margin: 18px 0;
+    padding: 15px 17px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(21, 101, 192, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sem5-study-banner span { color: var(--muted); }
+
+.sem5-unit-heading-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.sem5-unit-heading-row .sem5-unit-title { margin: 0; }
+
+.study-unit-btn,
+.topic-study-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 9px 12px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.study-unit-btn:hover,
+.topic-study-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.sem5-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.sem5-topic {
+    background: rgba(255,255,255,.025);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    min-height: 100%;
+}
+
+.topic-number {
+    font-size: 11px;
+    letter-spacing: .08em;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 7px;
+}
+
+.sem5-topic h4 { margin-bottom: 8px; }
+.sem5-topic p { line-height: 1.65; }
+
+.topic-study-btn {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.study-window-subtitle {
+    color: var(--muted);
+    margin-top: -8px;
+    margin-bottom: 22px;
+}
+
+.study-window-block {
+    margin: 18px 0;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255,255,255,.02);
+}
+
+.study-window-block h3 { margin-top: 0; }
+
+.worked-example {
+    margin-top: 14px;
+    padding: 16px;
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    background: rgba(21, 101, 192, .06);
+}
+
+.worked-example-title {
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.worked-example-title span {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.solution-box {
+    margin: 10px 0;
+    padding: 13px;
+    border-radius: 10px;
+    background: var(--card);
+    border: 1px dashed var(--border);
+    line-height: 1.7;
+}
+
+.unit-topic-map {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.unit-topic-map button {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.study-checklist label {
+    display: block;
+    margin: 10px 0;
+    color: var(--muted);
+}
+
+.study-checklist input { margin-right: 8px; }
+
+@media (max-width: 800px) {
+    .sem5-topic-grid,
+    .unit-topic-map { grid-template-columns: 1fr; }
+    .sem5-unit-heading-row { grid-template-columns: 1fr; }
+}
